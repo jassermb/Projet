@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page d'actualités</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+          
+            background-image: url(https://st.depositphotos.com/1000802/4578/i/950/depositphotos_45789713-stock-illustration-grunge-abstract-newspaper-background.jpg);
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #bebe8c;
+            color: white;
+            padding: 1em;
+            text-align: center;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .article {
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #fff;
+        }
+
+        .article h1 {
+            color: #333;
+        }
+
+        .article p {
+            color: #666;
+        }
+
+        .article .date {
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+   
+    <header>
+        <h1>Actualités</h1>
+    </header>
+
+    <main>
+         <h1>Dernier actualites</h1>
+        {{#each actualites}}
+        <div class="article">
+            <h1>{{this.titre}}</h1>
+            <p>{{this.description}}</p>
+            <p class="date">{{formattedDate}}</p>
+        </div>
+        {{/each}}
+    </main>
+</body>
+</html>
